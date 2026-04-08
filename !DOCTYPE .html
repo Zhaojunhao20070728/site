@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solve Quadratic Equation</title>
+</head>
+
+<body>
+  <script>
+    // (1) call prompt function for three times to get coefficient a, b and c from user
+    var a = prompt("Please enter the coefficient a (a > 0):");
+    var b = prompt("Please enter the coefficient b:");
+    var c = prompt("Please enter the coefficient c:");
+
+    // (2) convert them into number by using parseFloat
+    a = parseFloat(a);
+    b = parseFloat(b);
+    c = parseFloat(c);
+
+    // (3) compute delta = b*b - 4*a*c;
+    var delta = b * b - 4 * a * c;
+
+    // (4) compute x1 and x2
+    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+    // (5) using alert to tell user x1 and x2
+    alert("The solutions of the quadratic equation are x1 = " + x1 + " and x2 = " + x2);
+
+    // (6) tell user the same results using console.log
+    console.log("The solutions of the quadratic equation are x1 = " + x1 + " and x2 = " + x2);
+  </script>
+</body>
+
+</html>
